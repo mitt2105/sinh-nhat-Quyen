@@ -3,131 +3,98 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#fff7f2">
-  <meta name="description" content="Một món quà nhỏ dành tặng Phương — chúc mừng sinh nhật với thật nhiều yêu thương.">
-  <title>Happy Birthday Phương ♡</title>
+  <meta name="theme-color" content="#283b32">
+  <meta name="description" content="Một chuyến đi nhỏ qua những kỷ niệm đẹp, dành tặng Quyên nhân ngày sinh nhật 25.11.2026.">
+  <title>Quyên — Một chuyến đi tuổi mới</title>
   <link rel="icon" href="./assets/flower.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./css/style.css">
   <script src="./js/main.js" defer></script>
 </head>
 <body>
   <div class="grain" aria-hidden="true"></div>
   <header class="topbar">
-    <a class="brand" href="#home" aria-label="Về đầu trang"><span class="brand-mark">✿</span> for Phương</a>
-    <nav aria-label="Điều hướng chính">
-      <a href="#letter">Lời chúc</a><a href="#memories">Khoảnh khắc</a>
-    </nav>
-    <button class="music-toggle" id="musicToggle" aria-pressed="false" aria-label="Mở trình phát nhạc">
-      <span class="music-icon" aria-hidden="true">♫</span><span id="musicLabel">Nhạc nền</span>
-    </button>
+    <a class="brand" href="#home" aria-label="Về đầu trang"><span class="brand-mark">✳</span> POSTCARD No. 25</a>
+    <nav aria-label="Điều hướng"><a href="#letter">Lời nhắn</a><a href="#memories">Hành trình</a></nav>
+    <button class="music-toggle" id="musicToggle" aria-pressed="false"><span aria-hidden="true">♫</span><span id="musicLabel">Bật nhạc</span></button>
   </header>
 
   <main id="home">
-    <section class="hero section-wrap">
+    <section class="hero">
       <div class="hero-copy">
-        <p class="eyebrow"><span></span> A LITTLE CELEBRATION OF YOU <span></span></p>
-        <h1>Happy Birthday,<br><em>Phương</em><span class="heart">♡</span></h1>
-        <p class="hero-subtitle">Hôm nay là ngày thế giới trở nên dịu dàng hơn một chút — vì có em ở đây.</p>
-        <button class="primary-btn" id="openWish">Mở món quà nhỏ <span aria-hidden="true">↗</span></button>
-        <p class="tiny-note">made with a little extra love</p>
+        <p class="eyebrow"><span></span> A DAY WORTH REMEMBERING · 25 NOV 2026</p>
+        <h1>Happy<br>Birthday,<br><em>Quyên.</em></h1>
+        <p class="hero-subtitle">Một tấm bưu thiếp gửi đến cô gái đang bắt đầu chương mới của riêng mình.</p>
+        <a class="primary-btn" href="#letter">Mở lá thư <span aria-hidden="true">↘</span></a>
+        <div class="hero-meta"><span>FROM A FRIEND</span><span class="meta-line"></span><span>WITH WARM WISHES</span></div>
       </div>
       <div class="hero-art">
-        <div class="sun-glow"></div>
-        <div class="photo-frame">
-          <img src="./assets/photos/phuong-01.png" alt="Phương trong chiếc váy trắng ngoài trời — ảnh bìa sinh nhật" fetchpriority="high">
-          <div class="photo-sticker">today<br>is all<br><b>yours ♡</b></div>
-        </div>
-        <span class="float flower flower-a" aria-hidden="true">✿</span>
-        <span class="float flower flower-b" aria-hidden="true">✽</span>
-        <span class="float star star-a" aria-hidden="true">✧</span>
-        <span class="float star star-b" aria-hidden="true">✦</span>
-        <div class="caption-card"><span class="caption-icon">♡</span><span>May your day feel<br>like a warm hug.</span></div>
+        <div class="sun-disc" aria-hidden="true"></div>
+        <figure class="cover-photo">
+          <img src="./assets/photos/quyen-01.jpg" alt="Quyên — tấm ảnh bìa của cuốn nhật ký sinh nhật" fetchpriority="high">
+          <figcaption><span>25° NOVEMBER</span><span>✳</span><span>A MEMORY TO KEEP</span></figcaption>
+        </figure>
+        <div class="postmark" aria-hidden="true">SPECIAL<br>DELIVERY<div>Q</div>2026</div>
+        <span class="coordinate" aria-hidden="true">10°46' N / A NEW CHAPTER</span>
       </div>
-      <a class="scroll-cue" href="#letter"><span></span> scroll to feel the love</a>
+      <a class="scroll-cue" href="#letter">SCROLL TO EXPLORE <span>↓</span></a>
     </section>
 
     <section class="letter-section section-wrap" id="letter">
-      <div class="section-heading">
-        <p class="eyebrow">A NOTE JUST FOR YOU</p>
-        <h2>Gửi Phương, <em>thương mến.</em></h2>
-        <p class="section-intro">Có vài điều nhỏ xíu, nhưng anh mong em sẽ nhớ thật lâu.</p>
+      <div class="section-kicker"><span>01</span><span class="rule"></span><span>A NOTE FOR YOU</span></div>
+      <div class="letter-layout">
+        <div class="letter-heading"><p class="eyebrow">DEAR QUYÊN,</p><h2>Mong tuổi mới<br>là một <em>chuyến đi</em><br>thật đẹp.</h2></div>
+        <article class="letter-card">
+          <div class="letter-stamp">✳ &nbsp; 25.11.26</div>
+          <p>Quyên thân mến,</p>
+          <p>Chúc mừng sinh nhật bạn! Mong tuổi mới mở ra nhiều cung đường thú vị, những cuộc gặp gỡ ấm áp và thật nhiều khoảnh khắc khiến bạn muốn dừng lại để ngắm nhìn.</p>
+          <p>Chúc bạn luôn đủ bình yên để tận hưởng hiện tại, đủ can đảm để đi về phía những điều mình yêu, và luôn có người đồng hành trên những chặng đường quan trọng.</p>
+          <p>Hy vọng cuốn nhật ký nhỏ này sẽ giữ lại vài nụ cười của bạn hôm nay. Chúc mọi điều tốt đẹp tìm được đường đến với bạn.</p>
+          <div class="signature">Thân mến,<span>Một người bạn</span></div>
+        </article>
       </div>
-      <article class="letter-card" id="letterCard">
-        <div class="letter-top"><span>DEAR PHƯƠNG</span><span>♡ &nbsp; ♡ &nbsp; ♡</span></div>
-        <div class="letter-content">
-          <div class="letter-flower" aria-hidden="true">✿</div>
-          <p>Chúc mừng sinh nhật Phương! ♡</p>
-          <p>Mong tuổi mới sẽ mang đến cho em thật nhiều niềm vui, bình yên và những điều tốt đẹp. Mong mọi dự định em ấp ủ đều dần thành hiện thực, những ngày buồn sẽ qua nhanh và mỗi ngày đều có một lý do để mỉm cười.</p>
-          <p>Chúc cô gái đặc biệt luôn xinh đẹp, tự tin, được yêu thương và luôn giữ được sự dịu dàng của riêng mình.</p>
-          <p>Hy vọng khi nhìn lại tuổi mới, em sẽ có thật nhiều kỷ niệm đẹp để nhớ về.</p>
-          <p>Happy Birthday, Phương. Mong em luôn hạnh phúc! ♡</p>
-          <div class="signature">Một người anh mới kết bạn với em gần đây <span>luôn mong em thật nhiều niềm vui ♡</span></div>
-        </div>
-        <div class="letter-bottom">A LITTLE LETTER, A LOT OF LOVE <span>✧</span></div>
-      </article>
     </section>
 
     <section class="memories-section section-wrap" id="memories">
-      <div class="section-heading">
-        <p class="eyebrow">LITTLE THINGS, BIG FEELINGS</p>
-        <h2>Những điều <em>đáng yêu</em></h2>
-        <p class="section-intro">Một góc nhỏ để lưu giữ vẻ đẹp của ngày hôm nay.</p>
+      <div class="gallery-head">
+        <div><div class="section-kicker"><span>02</span><span class="rule"></span><span>THE PHOTO JOURNAL</span></div><h2>Những mảnh ghép<br><em>đáng nhớ.</em></h2></div>
+        <p class="gallery-intro">Chín khung hình, một cuốn nhật ký nhỏ. Chạm vào ảnh để ngắm gần hơn.</p>
       </div>
       <div class="memory-grid">
-        <button class="memory" data-full="./assets/photos/phuong-02.png" aria-label="Xem ảnh Phương">
-          <img src="./assets/photos/phuong-02.png" alt="Ảnh chân dung cận mặt của Phương" loading="lazy"><span class="memory-label">a smile for you <b>♡</b></span>
-        </button>
-        <button class="memory" data-full="./assets/photos/phuong-03.png" aria-label="Xem ảnh Phương">
-          <img src="./assets/photos/phuong-03.png" alt="Phương đeo kính, mỉm cười" loading="lazy"><span class="memory-label">sweet little moments <b>✿</b></span>
-        </button>
+        <button class="memory memory-01" data-full="./assets/photos/quyen-01.jpg" aria-label="Mở ảnh 1"><img src="./assets/photos/quyen-01.jpg" alt="Khoảnh khắc 1 của Quyên" loading="lazy" decoding="async"><span class="memory-number">01</span><span class="memory-caption">THE COVER</span></button>
+        <button class="memory memory-02" data-full="./assets/photos/quyen-02.jpg" aria-label="Mở ảnh 2"><img src="./assets/photos/quyen-02.jpg" alt="Khoảnh khắc 2 của Quyên" loading="lazy" decoding="async"><span class="memory-number">02</span><span class="memory-caption">A LITTLE SUNSHINE</span></button>
+        <button class="memory memory-03" data-full="./assets/photos/quyen-03.jpg" aria-label="Mở ảnh 3"><img src="./assets/photos/quyen-03.jpg" alt="Khoảnh khắc 3 của Quyên" loading="lazy" decoding="async"><span class="memory-number">03</span><span class="memory-caption">ON THE WAY</span></button>
+        <button class="memory memory-04" data-full="./assets/photos/quyen-04.jpg" aria-label="Mở ảnh 4"><img src="./assets/photos/quyen-04.jpg" alt="Khoảnh khắc 4 của Quyên" loading="lazy" decoding="async"><span class="memory-number">04</span><span class="memory-caption">A SOFT MOMENT</span></button>
+        <button class="memory memory-05" data-full="./assets/photos/quyen-05.jpg" aria-label="Mở ảnh 5"><img src="./assets/photos/quyen-05.jpg" alt="Khoảnh khắc 5 của Quyên" loading="lazy" decoding="async"><span class="memory-number">05</span><span class="memory-caption">POSTCARD MEMORY</span></button>
+        <button class="memory memory-06" data-full="./assets/photos/quyen-06.jpg" aria-label="Mở ảnh 6"><img src="./assets/photos/quyen-06.jpg" alt="Khoảnh khắc 6 của Quyên" loading="lazy" decoding="async"><span class="memory-number">06</span><span class="memory-caption">THE VIEW</span></button>
+        <button class="memory memory-07" data-full="./assets/photos/quyen-07.jpg" aria-label="Mở ảnh 7"><img src="./assets/photos/quyen-07.jpg" alt="Khoảnh khắc 7 của Quyên" loading="lazy" decoding="async"><span class="memory-number">07</span><span class="memory-caption">JUST BE YOU</span></button>
+        <button class="memory memory-08" data-full="./assets/photos/quyen-08.jpg" aria-label="Mở ảnh 8"><img src="./assets/photos/quyen-08.jpg" alt="Khoảnh khắc 8 của Quyên" loading="lazy" decoding="async"><span class="memory-number">08</span><span class="memory-caption">GOLDEN HOUR</span></button>
+        <button class="memory memory-09" data-full="./assets/photos/quyen-09.jpg" aria-label="Mở ảnh 9"><img src="./assets/photos/quyen-09.jpg" alt="Khoảnh khắc 9 của Quyên" loading="lazy" decoding="async"><span class="memory-number">09</span><span class="memory-caption">TO BE CONTINUED</span></button>
       </div>
-      <p class="gallery-note">Nhấn vào ảnh để xem rõ hơn ✨</p>
+      <p class="gallery-foot">LƯU LẠI NHỮNG ĐIỀU ĐẸP · KEEP WANDERING</p>
     </section>
 
-    <section class="final-section">
-      <div class="final-sparkle" aria-hidden="true">✧</div>
-      <p class="eyebrow">ONE LAST THING</p>
-      <h2>Tuổi mới thật <em>rực rỡ</em> nhé!</h2>
-      <p>Chúc Phương luôn được yêu thương, được là chính mình và tìm thấy phép màu trong những điều bình thường nhất.</p>
-      <button class="outline-btn" id="celebrateBtn">Gửi Phương một bầu trời pháo hoa ✨</button>
-      <div class="final-sign">happy birthday, with love <span>♡</span></div>
+    <section class="birthday-section">
+      <div class="birthday-inner">
+        <p class="eyebrow">YOUR NEXT CHAPTER STARTS</p>
+        <h2>25 <span>·</span> 11 <span>·</span> 2026</h2>
+        <p>Chúc hành trình phía trước của bạn có thật nhiều nắng.</p>
+        <div class="countdown" id="countdown" aria-live="polite"></div>
+        <a class="outline-btn" href="#home">Quay lại tấm bưu thiếp ↑</a>
+      </div>
+      <span class="birthday-star star-left" aria-hidden="true">✳</span><span class="birthday-star star-right" aria-hidden="true">✳</span>
     </section>
-  </main>
-
 
     <section class="music-section section-wrap" id="music">
-      <div class="section-heading">
-        <p class="eyebrow">A SONG FOR YOUR DAY</p>
-        <h2>Một chút nhạc <em>cho Phương</em></h2>
-        <p class="section-intro">Một giai điệu sinh nhật dành riêng cho em. Nếu trình duyệt chặn tự phát, chỉ cần bấm nút phát bên dưới nhé.</p>
-      </div>
-      <div class="audio-card">
-        <div class="audio-art" aria-hidden="true">♫ <span>♡</span></div>
-        <div class="audio-copy"><strong>Happy Birthday To You</strong><span>for Phương · with love</span></div>
-        <audio id="birthdayMusic" src="./assets/music/birthday.mp3" controls loop preload="auto" autoplay>
-          Trình duyệt của bạn không hỗ trợ phát âm thanh.
-        </audio>
-        <p class="audio-status" id="audioStatus" aria-live="polite">Đang chuẩn bị nhạc…</p>
-      </div>
+      <div class="music-note"><span class="music-glyph">♫</span><div><p class="eyebrow">SOUNDTRACK FOR THE ROAD</p><h2>Một giai điệu <em>dịu dàng.</em></h2><p>Nhạc nền cho chuyến đi nhỏ này. Chạm nút phát khi bạn muốn nghe.</p></div></div>
+      <audio id="birthdayMusic" src="./assets/music/birthday.mp3" loop preload="none"></audio>
+      <p class="audio-status" id="audioStatus" aria-live="polite">Nhạc đang tạm dừng.</p>
     </section>
+  </main>
+  <footer><span>MADE FOR QUYÊN · 25.11.2026</span><span>FROM A FRIEND, WITH CARE <b>✳</b></span></footer>
 
-  <footer><span>made for Phương</span><span>with love & a little sparkle ✧</span></footer>
-
-  <dialog id="wishDialog" class="wish-dialog" aria-labelledby="dialogTitle">
-    <button class="dialog-close" id="closeWish" aria-label="Đóng lời chúc">×</button>
-    <div class="dialog-flower">✿</div>
-    <p class="eyebrow">A WISH FOR YOU</p>
-    <h2 id="dialogTitle">Phương ơi, <em>chúc mừng sinh nhật!</em></h2>
-    <p>Chúc mừng sinh nhật Phương! ♡ Mong tuổi mới sẽ mang đến cho em thật nhiều niềm vui, bình yên và những điều tốt đẹp. Mong mọi dự định ấp ủ đều dần thành hiện thực, những ngày buồn sẽ qua nhanh và mỗi ngày đều có một lý do để mỉm cười.</p>
-    <p>Chúc cô gái đặc biệt luôn xinh đẹp, tự tin, được yêu thương và luôn giữ được sự dịu dàng của riêng mình. Hy vọng khi nhìn lại tuổi mới, em sẽ có thật nhiều kỷ niệm đẹp để nhớ về.</p>
-    <p class="dialog-sign">Happy Birthday, Phương. Mong em luôn hạnh phúc! ♡<br><em>— Một người anh mới kết bạn với em gần đây</em></p>
-    <button class="primary-btn" id="dialogCelebrate">Thổi nến và ước nhé! ✨</button>
-  </dialog>
-
-  <dialog id="lightbox" class="lightbox" aria-label="Ảnh xem lớn">
-    <button class="dialog-close" id="closeLightbox" aria-label="Đóng ảnh">×</button>
-    <img id="lightboxImage" alt="">
-  </dialog>
-  <div id="confettiLayer" aria-hidden="true"></div>
+  <dialog id="lightbox" class="lightbox" aria-label="Ảnh xem lớn"><button class="dialog-close" id="closeLightbox" aria-label="Đóng ảnh">×</button><img id="lightboxImage" alt=""><p id="lightboxCaption"></p></dialog>
 </body>
 </html>

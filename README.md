@@ -1,24 +1,19 @@
-# Happy Birthday Phương ♡ — bản hoàn chỉnh
+# Quyên — Một chuyến đi tuổi mới
 
-Website sinh nhật mobile-first, phong cách hồng phấn – kem – vàng champagne.
+Website sinh nhật mobile-first dành tặng Quyên nhân ngày 25/11/2026. Thiết kế kết hợp nhật ký du lịch, phong cách editorial và bưu thiếp vintage với tông xanh rêu, giấy ngà, đất nung và vàng champagne.
 
-## Đã tích hợp
-- Ba ảnh của Phương: `assets/photos/phuong-01.png` làm ảnh bìa và `phuong-02.png`, `phuong-03.png` trong thư viện, có chức năng phóng to.
-- Nhạc MP3 `assets/music/birthday.mp3` từ file người dùng cung cấp.
-- Lời chúc sinh nhật theo nội dung người dùng cung cấp, ký tên “Một người bạn gần”.
-- Hiệu ứng hoa/trái tim/pháo hoa và bố cục responsive.
+## Nội dung
 
-## Nhạc tự động phát
-Website thử phát nhạc tự động khi tải trang. Tuy nhiên, Chrome, Safari và các trình duyệt hiện đại thường chặn autoplay có âm thanh cho đến khi người xem tương tác. Nếu bị chặn, người xem chỉ cần bấm **Play** trên trình phát nhạc. Đây là giới hạn của trình duyệt, không phải lỗi của website.
+- Ảnh bìa: `assets/photos/quyen-01.jpg`.
+- Bộ ảnh: đủ chín ảnh `quyen-01.jpg` đến `quyen-09.jpg`; chạm ảnh để xem lớn.
+- Nhạc: giữ nguyên `assets/music/birthday.mp3`; người xem chủ động bật nhạc.
+- Lời chúc từ một người bạn, đồng hồ đếm ngược tới sinh nhật.
+- Bố cục co giãn cho màn hình nhỏ, hỗ trợ giảm chuyển động.
 
-## Chạy thử
-Giải nén ZIP rồi mở `index.html` trong trình duyệt. Tệp ảnh và MP3 đều nằm trong dự án, nên không cần tải từ dịch vụ ngoài.
+## Chạy tại chỗ
 
-## Triển khai GitHub Pages
-1. Giải nén ZIP.
-2. Tải các tệp bên trong thư mục dự án lên repository `https://github.com/mitt2105/sinh-nhat-Phuong`, bảo đảm `index.html` ở thư mục gốc của nhánh xuất bản.
-3. Vào **Settings → Pages**.
-4. Chọn **Deploy from a branch**, nhánh `main`, thư mục `/(root)`, rồi **Save**.
-5. Mở URL Pages GitHub cung cấp sau khi triển khai.
+Mở `index.html` trong trình duyệt hoặc chạy một máy chủ tĩnh trong thư mục gốc dự án. Dự án không cần bước biên dịch hay phụ thuộc cài đặt.
 
-Không có thay đổi nào được commit hoặc push tự động. Lưu ý GitHub Pages công khai nội dung website; chỉ sử dụng ảnh và nhạc bạn có quyền chia sẻ.
+## Ghi chú
+
+Không tự phát âm thanh khi mở trang để tránh gây bất ngờ và tuân theo giới hạn autoplay của trình duyệt.

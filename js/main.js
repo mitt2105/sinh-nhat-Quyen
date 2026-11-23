@@ -3,22 +3,77 @@
   const lightbox = $("#lightbox");
   const image = $("#lightboxImage");
   const caption = $("#lightboxCaption");
+  const photos = [...document.querySelectorAll(".memory")];
+  let currentPhoto = 0;
 
-  document.querySelectorAll(".memory").forEach((button) => {
+  // The opening keeps the surprise in front until the visitor chooses to open it.
+  const gate = $("#envelopeGate");
+  const openCard = $("#openCard");
+  openCard.addEventListener("click", () => {
+    document.body.classList.add("card-open");
+    gate.setAttribute("aria-hidden", "true");
+    gate.inert = true;
+    document.querySelector(".topbar").inert = false;
+    document.querySelector("main").inert = false;
+    document.querySelector("footer").inert = false;
+    window.setTimeout(() => { gate.hidden = true; }, matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : 1150);
+    document.querySelector(".topbar").classList.add("revealed");
+    document.querySelector("main").focus({ preventScroll: true });
+    const burst = document.createElement("div");
+    burst.className = "confetti-burst";
+    burst.setAttribute("aria-hidden", "true");
+    for (let i = 0; i < 28; i += 1) {
+      const piece = document.createElement("i");
+      piece.style.setProperty("--turn", `${Math.random() * 360}deg`);
+      piece.style.setProperty("--drift", `${(Math.random() - .5) * 90}vw`);
+      piece.style.setProperty("--delay", `${Math.random() * 260}ms`);
+      burst.append(piece);
+    }
+    document.body.append(burst);
+    window.setTimeout(() => burst.remove(), 2400);
+  });
+
+  // Reveal each chapter as it enters view, with a no-motion fallback.
+  const revealItems = document.querySelectorAll(".hero-copy, .hero-art, .section-kicker, .letter-heading, .letter-card, .gallery-head, .memory, .birthday-inner, .music-note");
+  if ("IntersectionObserver" in window && !matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    revealItems.forEach((item) => item.classList.add("will-reveal"));
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: "0px 0px -35px 0px" });
+    revealItems.forEach((item) => revealObserver.observe(item));
+  }
+
+  const showPhoto = (index) => {
+    currentPhoto = (index + photos.length) % photos.length;
+    const button = photos[currentPhoto];
+    image.src = button.dataset.full;
+    image.alt = $("img", button).alt;
+    caption.textContent = `KHOẢNH KHẮC ${String(currentPhoto + 1).padStart(2, "0")}`;
+    $("#lightboxCounter").textContent = `${String(currentPhoto + 1).padStart(2, "0")} / ${String(photos.length).padStart(2, "0")}`;
+  };
+  photos.forEach((button, index) => {
     button.addEventListener("click", () => {
-      image.src = button.dataset.full;
-      image.alt = $("img", button).alt;
-      caption.textContent = $(".memory-caption", button)?.textContent || "";
+      showPhoto(index);
       lightbox.showModal();
     });
+  });
+  $("#previousPhoto").addEventListener("click", () => showPhoto(currentPhoto - 1));
+  $("#nextPhoto").addEventListener("click", () => showPhoto(currentPhoto + 1));
+  lightbox.addEventListener("keydown", (event) => {
+    if (event.key === "ArrowLeft") showPhoto(currentPhoto - 1);
+    if (event.key === "ArrowRight") showPhoto(currentPhoto + 1);
   });
   $("#closeLightbox").addEventListener("click", () => lightbox.close());
   lightbox.addEventListener("click", (event) => {
     if (event.target === lightbox) lightbox.close();
   });
 
-  // Try autoplay on arrival; if browser policy blocks it, keep the control
-  // available and explain the next step in a visible message.
+  // Keep playback opt-in; report any loading or playback state in the control.
   const audio = $("#birthdayMusic");
   const musicToggle = $("#musicToggle");
   const musicLabel = $("#musicLabel");
@@ -133,9 +188,7 @@
     setAudioState(false, playbackErrorMessage());
   });
 
-  // This may be rejected by browser autoplay policy; playAudio reports that
-  // case visibly, and the button remains the user-gesture fallback.
-  playAudio(true);
+  // Audio starts only after an explicit tap on the visible music control.
 
   const countdown = $("#countdown");
   const birthday = new Date("2026-11-25T00:00:00+07:00");

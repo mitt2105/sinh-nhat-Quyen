@@ -14,14 +14,23 @@
   <script src="./js/main.js?v=90a6bfc6" defer></script>
 </head>
 <body>
+  <section class="envelope-gate" id="envelopeGate" aria-labelledby="gateTitle">
+    <div class="gate-sky" aria-hidden="true"></div>
+    <div class="gate-copy"><p class="eyebrow">A PERSONAL DELIVERY · 25 NOVEMBER 2026</p><h1 id="gateTitle">Một tấm thiệp<br><em>dành riêng cho em.</em></h1><p>Quyên, có một điều nhỏ đang chờ em mở.</p></div>
+    <button class="envelope-button" id="openCard" aria-label="Mở phong bì và xem thiệp sinh nhật">
+      <span class="envelope-back"></span><span class="letter-peek"><span>FOR QUYÊN</span><b>25 · 11 · 2026</b></span><span class="envelope-front"></span><span class="envelope-flap"></span><span class="wax-seal" aria-hidden="true">Q</span>
+    </button>
+    <p class="gate-hint">CHẠM CON DẤU ĐỂ MỞ THIỆP <span aria-hidden="true">↓</span></p>
+  </section>
+  <div class="ambient-dust" aria-hidden="true"></div>
   <div class="grain" aria-hidden="true"></div>
-  <header class="topbar">
+  <header class="topbar" inert>
     <a class="brand" href="#home" aria-label="Về đầu trang"><span class="brand-mark">✳</span> POSTCARD No. 25</a>
     <nav aria-label="Điều hướng"><a href="#letter">Lời nhắn</a><a href="#memories">Hành trình</a></nav>
     <button class="music-toggle" id="musicToggle" aria-pressed="false"><span aria-hidden="true">♫</span><span id="musicLabel">Bật nhạc</span></button>
   </header>
 
-  <main id="home">
+  <main id="home" tabindex="-1" inert>
     <section class="hero">
       <div class="hero-copy">
         <p class="eyebrow"><span></span> A DAY WORTH REMEMBERING · 25 NOV 2026</p>
@@ -52,7 +61,7 @@
           <p>Chúc mừng sinh nhật em! Mong tuổi mới mở ra nhiều cung đường thú vị, những cuộc gặp gỡ ấm áp và thật nhiều khoảnh khắc khiến em muốn dừng lại để ngắm nhìn.</p>
           <p>Chúc em luôn đủ bình yên để tận hưởng hiện tại, đủ can đảm để đi về phía những điều em yêu, và luôn có người đồng hành trên những chặng đường quan trọng.</p>
           <p>Hy vọng cuốn nhật ký nhỏ này sẽ giữ lại vài nụ cười của em hôm nay. Chúc mọi điều tốt đẹp tìm được đường đến với em.</p>
-          <div class="signature">Tặng em,<span>Từ một người bạn gần đây của em</span></div>
+          <div class="signature">Tặng em,<span>Một người bạn</span></div>
         </article>
       </div>
     </section>
@@ -76,10 +85,10 @@
     </section>
 
     <section class="birthday-section">
-      <div class="birthday-inner">
+      <div class="birthday-inner closing-letter">
         <p class="eyebrow">YOUR NEXT CHAPTER STARTS</p>
         <h2>25 <span>·</span> 11 <span>·</span> 2026</h2>
-        <p>Chúc hành trình phía trước của em có thật nhiều nắng.</p>
+        <p>Quyên thân mến,<br>Chúc em luôn tìm thấy những con đường đẹp, những miền đất khiến tim mình rung động, và đủ bình yên để tận hưởng từng khoảnh khắc trên hành trình của riêng em. Mong tuổi mới dịu dàng với em — hôm nay và cả những ngày thường.<br><span class="closing-signature">Thương mến,<br>Một người bạn</span></p>
         <div class="countdown" id="countdown" aria-live="polite"></div>
         <a class="outline-btn" href="#home">Quay lại tấm bưu thiếp ↑</a>
       </div>
@@ -92,9 +101,9 @@
       <p class="audio-status" id="audioStatus" aria-live="polite">Nhạc đang tạm dừng.</p>
     </section>
   </main>
-  <footer><span>MADE FOR QUYÊN · 25.11.2026</span><span>FROM A FRIEND, WITH CARE <b>✳</b></span></footer>
+  <footer inert><span>MADE FOR QUYÊN · 25.11.2026</span><span>FROM A FRIEND, WITH CARE <b>✳</b></span></footer>
 
-  <dialog id="lightbox" class="lightbox" aria-label="Ảnh xem lớn"><button class="dialog-close" id="closeLightbox" aria-label="Đóng ảnh">×</button><img id="lightboxImage" alt=""><p id="lightboxCaption"></p></dialog>
+  <dialog id="lightbox" class="lightbox" aria-label="Ảnh xem lớn"><button class="dialog-close" id="closeLightbox" aria-label="Đóng ảnh">×</button><button class="lightbox-nav lightbox-prev" id="previousPhoto" aria-label="Ảnh trước">←</button><img id="lightboxImage" alt=""><button class="lightbox-nav lightbox-next" id="nextPhoto" aria-label="Ảnh tiếp theo">→</button><p id="lightboxCaption"></p><p class="lightbox-counter" id="lightboxCounter"></p></dialog>
   <p class="audio-notice" id="audioNotice" role="status" aria-live="polite" aria-atomic="true" hidden></p>
 </body>
 </html>

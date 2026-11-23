@@ -10,8 +10,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./css/style.css?v=e922958">
-  <script src="./js/main.js?v=e922958" defer></script>
+  <link rel="stylesheet" href="./css/style.css?v=mobile-grid-1">
+  <script src="./js/main.js?v=mobile-grid-1" defer></script>
 </head>
 <body>
   <section class="envelope-gate" id="envelopeGate" aria-labelledby="gateTitle">
@@ -25,7 +25,7 @@
   <div class="ambient-dust" aria-hidden="true"></div>
   <div class="grain" aria-hidden="true"></div>
   <header class="topbar" inert>
-    <a class="brand" href="#home" aria-label="Về đầu trang"><span class="brand-mark">✳</span> POSTCARD No. 25</a>
+    <a class="brand" href="#home" aria-label="Về đầu trang"><svg class="ornament-icon brand-mark" viewBox="0 0 40 40" aria-hidden="true"><path d="M20 1 23 14 33 5 26 17 39 20 26 23 33 35 23 26 20 39 17 26 7 35 14 23 1 20 14 17 7 5 17 14Z"/></svg> POSTCARD No. 25</a>
     <nav aria-label="Điều hướng"><a href="#letter">Lời nhắn</a><a href="#memories">Hành trình</a></nav>
     <button class="music-toggle" id="musicToggle" aria-pressed="false"><span aria-hidden="true">♫</span><span id="musicLabel">Bật nhạc</span></button>
   </header>
@@ -43,7 +43,7 @@
         <div class="sun-disc" aria-hidden="true"></div>
         <figure class="cover-photo">
           <img src="./assets/photos/quyen-01.jpg" alt="Quyên — tấm ảnh bìa của cuốn nhật ký sinh nhật" fetchpriority="high">
-          <figcaption><span>25° NOVEMBER</span><span>✳</span><span>A MEMORY TO KEEP</span></figcaption>
+          <figcaption><span>25° NOVEMBER</span><span><svg class="ornament-icon" viewBox="0 0 40 40" aria-hidden="true"><path d="M20 1 23 14 33 5 26 17 39 20 26 23 33 35 23 26 20 39 17 26 7 35 14 23 1 20 14 17 7 5 17 14Z"/></svg></span><span>A MEMORY TO KEEP</span></figcaption>
         </figure>
         <div class="postmark" aria-hidden="true">SPECIAL<br>DELIVERY<div>Q</div>2026</div>
         <span class="coordinate" aria-hidden="true">10°46' N / A NEW CHAPTER</span>
@@ -56,7 +56,7 @@
       <div class="letter-layout">
         <div class="letter-heading"><p class="eyebrow">DEAR QUYÊN,</p><h2>Mong tuổi mới<br>là một <em>chuyến đi</em><br>thật đẹp.</h2></div>
         <article class="letter-card">
-          <div class="letter-stamp">✳ &nbsp; 25.11.26</div>
+          <div class="letter-stamp"><svg class="ornament-icon" viewBox="0 0 40 40" aria-hidden="true"><path d="M20 1 23 14 33 5 26 17 39 20 26 23 33 35 23 26 20 39 17 26 7 35 14 23 1 20 14 17 7 5 17 14Z"/></svg> &nbsp; 25.11.26</div>
           <p>Quyên,</p>
           <p>Chúc mừng sinh nhật em! Mong tuổi mới mở ra nhiều cung đường thú vị, những cuộc gặp gỡ ấm áp và thật nhiều khoảnh khắc khiến em muốn dừng lại để ngắm nhìn.</p>
           <p>Chúc em luôn đủ bình yên để tận hưởng hiện tại, đủ can đảm để đi về phía những điều em yêu, và luôn có người đồng hành trên những chặng đường quan trọng.</p>
@@ -92,7 +92,7 @@
         <div class="countdown" id="countdown" aria-live="polite"></div>
         <a class="outline-btn" href="#home">Quay lại tấm bưu thiếp ↑</a>
       </div>
-      <span class="birthday-star star-left" aria-hidden="true">✳</span><span class="birthday-star star-right" aria-hidden="true">✳</span>
+      <svg class="birthday-star star-left" viewBox="0 0 40 40" aria-hidden="true"><path d="M20 1 23 14 33 5 26 17 39 20 26 23 33 35 23 26 20 39 17 26 7 35 14 23 1 20 14 17 7 5 17 14Z"/></svg><svg class="birthday-star star-right" viewBox="0 0 40 40" aria-hidden="true"><path d="M20 1 23 14 33 5 26 17 39 20 26 23 33 35 23 26 20 39 17 26 7 35 14 23 1 20 14 17 7 5 17 14Z"/></svg>
     </section>
 
     <section class="music-section section-wrap" id="music">
@@ -101,7 +101,7 @@
       <p class="audio-status" id="audioStatus" aria-live="polite">Nhạc đang tạm dừng.</p>
     </section>
   </main>
-  <footer inert><span>MADE FOR QUYÊN · 25.11.2026</span><span>FROM A FRIEND, WITH CARE <b>✳</b></span></footer>
+  <footer inert><span>MADE FOR QUYÊN · 25.11.2026</span><span>FROM A FRIEND, WITH CARE <b><svg class="ornament-icon" viewBox="0 0 40 40" aria-hidden="true"><path d="M20 1 23 14 33 5 26 17 39 20 26 23 33 35 23 26 20 39 17 26 7 35 14 23 1 20 14 17 7 5 17 14Z"/></svg></b></span></footer>
 
   <dialog id="lightbox" class="lightbox" aria-label="Ảnh xem lớn"><button class="dialog-close" id="closeLightbox" aria-label="Đóng ảnh">×</button><button class="lightbox-nav lightbox-prev" id="previousPhoto" aria-label="Ảnh trước">←</button><img id="lightboxImage" alt=""><button class="lightbox-nav lightbox-next" id="nextPhoto" aria-label="Ảnh tiếp theo">→</button><p id="lightboxCaption"></p><p class="lightbox-counter" id="lightboxCounter"></p></dialog>
   <p class="audio-notice" id="audioNotice" role="status" aria-live="polite" aria-atomic="true" hidden></p>

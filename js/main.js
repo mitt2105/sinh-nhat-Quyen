@@ -195,7 +195,7 @@
   const updateCountdown = () => {
     const remaining = birthday.getTime() - Date.now();
     if (remaining <= 0) {
-      countdown.textContent = "HÔM NAY LÀ NGÀY CỦA BẠN ✳";
+      countdown.textContent = "HÔM NAY LÀ NGÀY CỦA BẠN";
       return;
     }
     const days = Math.ceil(remaining / 86400000);

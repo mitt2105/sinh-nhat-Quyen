@@ -8,7 +8,7 @@
     button.addEventListener("click", () => {
       image.src = button.dataset.full;
       image.alt = $("img", button).alt;
-      caption.textContent = $(" .memory-caption", button).textContent;
+      caption.textContent = $(".memory-caption", button)?.textContent || "";
       lightbox.showModal();
     });
   });
@@ -17,33 +17,61 @@
     if (event.target === lightbox) lightbox.close();
   });
 
+  // Audio: show clear loading/playback/error states and support touch devices.
   const audio = $("#birthdayMusic");
   const musicToggle = $("#musicToggle");
   const musicLabel = $("#musicLabel");
   const audioStatus = $("#audioStatus");
+
+  const setAudioState = (playing, message) => {
+    musicToggle.setAttribute("aria-pressed", String(playing));
+    musicLabel.textContent = playing ? "Tắt nhạc" : "Bật nhạc";
+    audioStatus.textContent = message;
+  };
+
   musicToggle.addEventListener("click", async () => {
-    if (audio.paused) {
-      try {
-        await audio.play();
-      } catch {
-        audioStatus.textContent = "Không thể phát nhạc lúc này. Hãy thử lại nhé.";
-      }
-    } else {
+    if (!audio.paused) {
       audio.pause();
+      return;
+    }
+
+    setAudioState(false, "Đang tải nhạc…");
+    try {
+      // Calling play() directly inside the click handler preserves the
+      // browser's user-activation permission on mobile and desktop.
+      const playRequest = audio.play();
+      if (playRequest && typeof playRequest.then === "function") {
+        await playRequest;
+      }
+    } catch (error) {
+      console.error("Birthday audio playback failed:", error);
+      const code = audio.error?.code;
+      const reason = code === 2
+        ? "Lỗi mạng khi tải tệp nhạc. Hãy tải lại trang."
+        : code === 3 || code === 4
+          ? "Tệp MP3 không đọc được hoặc định dạng không được hỗ trợ."
+          : "Trình duyệt chưa phát được nhạc. Hãy thử bấm lại hoặc kiểm tra âm lượng thiết bị.";
+      setAudioState(false, reason);
     }
   });
-  audio.addEventListener("play", () => {
-    musicToggle.setAttribute("aria-pressed", "true");
-    musicLabel.textContent = "Tắt nhạc";
-    audioStatus.textContent = "Nhạc đang phát ♫";
+
+  audio.addEventListener("loadstart", () => {
+    if (audio.paused) audioStatus.textContent = "Đang kết nối tới tệp nhạc…";
   });
-  audio.addEventListener("pause", () => {
-    musicToggle.setAttribute("aria-pressed", "false");
-    musicLabel.textContent = "Bật nhạc";
-    audioStatus.textContent = "Nhạc đang tạm dừng.";
+  audio.addEventListener("canplay", () => {
+    if (audio.paused) audioStatus.textContent = "Đã sẵn sàng. Nhấn “Bật nhạc” để nghe.";
   });
+  audio.addEventListener("playing", () => setAudioState(true, "Nhạc đang phát ♫"));
+  audio.addEventListener("pause", () => setAudioState(false, "Nhạc đang tạm dừng."));
+  audio.addEventListener("ended", () => setAudioState(false, "Bản nhạc đã kết thúc."));
   audio.addEventListener("error", () => {
-    audioStatus.textContent = "Tệp nhạc hiện chưa tải được.";
+    const code = audio.error?.code;
+    const reason = code === 2
+      ? "Không tải được tệp nhạc do lỗi mạng."
+      : code === 3 || code === 4
+        ? "Tệp birthday.mp3 bị lỗi hoặc không đúng định dạng MP3."
+        : "Không tìm thấy tệp nhạc. Kiểm tra assets/music/birthday.mp3.";
+    setAudioState(false, reason);
   });
 
   const countdown = $("#countdown");

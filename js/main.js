@@ -34,7 +34,7 @@
     audioStatus.textContent = message;
     if (audioNotice) {
       audioNotice.textContent = message;
-      audioNotice.hidden = !message;
+      audioNotice.hidden = playing || !message || /^(Nhạc đang tạm dừng|Nhạc đang phát|Bản nhạc đã kết thúc)/.test(message);
     }
   };
 

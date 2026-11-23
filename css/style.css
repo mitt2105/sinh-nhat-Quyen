@@ -25,3 +25,5 @@ footer{display:flex;justify-content:space-between;padding:21px 6vw;background:va
   .letter-card p:first-of-type{font-size:20px;line-height:1.5}
   .signature span{font-size:10px;letter-spacing:.055em;line-height:1.6}
 }
+
+@media(max-width:370px){.topbar{padding-inline:4%}.brand{font-size:8px;letter-spacing:.04em}}

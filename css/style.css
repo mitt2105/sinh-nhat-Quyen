@@ -61,3 +61,12 @@ main:focus{outline:none}
 /* Stable vector ornaments and a balanced two-column phone album. */
 .ornament-icon{display:inline-block;width:1em;height:1em;fill:currentColor;vertical-align:-.12em;flex:none}.brand-mark{width:17px;height:17px}.cover-photo figcaption .ornament-icon{width:15px;height:15px}.letter-stamp .ornament-icon{width:10px;height:10px}.birthday-star{width:1em;height:1em;fill:#bd9b6122}.memory:before{content:"QUYÊN’S TRAVEL JOURNAL · 2026"}
 @media(max-width:760px){.memory-grid{grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:auto;align-items:stretch}.memory,.memory-01,.memory-02,.memory-03,.memory-04,.memory-05,.memory-06,.memory-07,.memory-08,.memory-09{grid-column:auto;grid-row:auto;aspect-ratio:.78;padding:6px 6px 25px}.memory-09{grid-column:1/-1;aspect-ratio:1.55}.memory img{min-height:0}.memory:before{font-size:clamp(5px,1.55vw,7px);letter-spacing:.08em}}
+
+/* Readability pass: keep the postcard styling while making copy easier to read. */
+body{font-size:17px}
+.eyebrow,.section-kicker,.gallery-foot,.hero-meta,.cover-photo figcaption,.coordinate,.scroll-cue,.music-toggle,.audio-status,footer{font-size:10px}
+.hero-subtitle{font-size:19px}
+.primary-btn,.outline-btn,.music-toggle{font-size:12px}
+.letter-card p{font-size:18px}
+.signature span{font-size:11px}
+@media(max-width:760px){body{font-size:16px}.hero-subtitle{font-size:18px}.eyebrow,.section-kicker,.gallery-foot,.hero-meta,.cover-photo figcaption,.coordinate,.scroll-cue,.audio-status{font-size:9px}.letter-card p{font-size:17px}.primary-btn,.outline-btn,.music-toggle{font-size:12px}}

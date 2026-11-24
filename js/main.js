@@ -96,7 +96,7 @@
   const playbackErrorMessage = () => {
     const code = audio.error?.code;
     if (code === 2) return "Không tải được nhạc do lỗi mạng. Hãy kiểm tra kết nối rồi thử lại.";
-    if (code === 3 || code === 4) return "Không đọc được tệp birthday.mp3. Tệp nhạc trên máy chủ có thể bị hỏng.";
+    if (code === 3 || code === 4) return "Không đọc được tệp nhạc. Tệp trên máy chủ có thể bị hỏng.";
     return "Trình duyệt chưa thể phát nhạc. Hãy thử lại hoặc kiểm tra âm lượng thiết bị.";
   };
 
@@ -195,7 +195,7 @@
   const updateCountdown = () => {
     const remaining = birthday.getTime() - Date.now();
     if (remaining <= 0) {
-      countdown.textContent = "HÔM NAY LÀ NGÀY CỦA BẠN";
+      countdown.textContent = "HÔM NAY LÀ NGÀY CỦA EM";
       return;
     }
     const days = Math.ceil(remaining / 86400000);
